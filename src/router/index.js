@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home.vue'
-import Catgory from '../views/catgory.vue'
+import Category from '../views/category.vue'
 import Find from '../views/find.vue'
 import Cart from '../views/cart.vue'
 import Mine from '../views/mine.vue'
@@ -14,9 +14,9 @@ const routes = [
     name: 'home',
     component: Home
   },{
-    path: '/catgory',
-    name: 'catgory',
-    component: Catgory
+    path: '/category',
+    name: 'category',
+    component: Category
   },{
     path: '/find',
     name: 'find',

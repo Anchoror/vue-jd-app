@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+        <ul>
+            <li>12</li>
+            <li>23</li>
+            <li>34</li>
+        </ul>
+        <ul>
+            <li>a</li>
+        </ul>
+        <p>hellow</p>
+        <p>world</p>
+    </div>
+    <div class="box2">
+
+    </div>
+</body>
+<script>
+    window.onscroll = function(){
+        let top = document.documentElement.scrollTop
+        console.log(top)
+        let box2 = document.getElementsByClassName("box2")
+        let height = box2.offsetHeight
+        console.log(height)
+        if(top>150){
+            let box1 = document.getElementsByClassName("box1")[0];
+            box1.style.transform = "translateX(20px)";
+            console.log("=================================")
+        }
+    }
+
+    function addData (){
+        let box1 = document.getElementsByClassName("box1")[0]
+        let x = 1
+        setTimeout(function(){
+            let newli = document.createElement("li")
+            newli.innerText = x++
+            box1.appendChild(newli)
+        },1000)
+    }
+
+    addData()
+    function test(){
+        let box1 = document.getElementsByClassName("box1")[0]
+        console.log(box1)
+        let children1 = box1.children;
+        let children2 = box1.childNodes;
+        console.log(children1)
+        console.log(children2)
+    }
+    test()
+</script>
+
+<style>
+    .box1{
+        width: 100%;
+        height: 200px;
+        background-color: salmon;
+        transition: all 6s ease 0s;
+        
+    }
+    /* .box1:hover{
+        transform: translateX(20px);
+    } */
+    .box2{
+        width: 100%;
+        height: 1500px;
+        background-color: yellow;
+    }
+</style>
+</html>
