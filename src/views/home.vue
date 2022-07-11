@@ -22,7 +22,7 @@ import HomeBanner from "../components/HomeBanner.vue";
 import HomeNav from "../components/HomeNav.vue";
 import HomeMain from "../components/HomeMain.vue";
 
-import {bindEvent,scrollPic} from '../assets/js/index.js'
+// import {bindEvent,scrollPic} from '../assets/js/index.js'
 
 export default {
   components:{
@@ -32,8 +32,8 @@ export default {
     HomeMain,
   },
   mounted(){
-    bindEvent()
-    scrollPic()
+    // bindEvent()
+    // scrollPic()
   }
 }
 </script>
