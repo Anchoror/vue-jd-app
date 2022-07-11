@@ -13,7 +13,7 @@ function check() {
             }
         };
     }
-};
+}
 
 function animatDelBox() {
     var cart_del = document.getElementsByClassName("cart_del");
@@ -50,7 +50,7 @@ function animatDelBox() {
         }
     };
 
-};
+}
 
 module.exports = {
     check,
