@@ -1,7 +1,7 @@
 <template>
     <div class="home_h">
         <header class="m_header">
-            <div class="m_header_box" id="my_search">
+            <div class="m_header_box" id="my_search" ref="mySearch" >
                 <a href="#" class="icon_logo"></a>
                 <form action="#">
                     <span class="icon_search"></span>
@@ -15,10 +15,31 @@
 
 <script>
 export default{
+    props:{
+        bannerHeight:{
+            type:Number
+        }
+    },
     data(){
         return{
-            inputMsg:''
+            inputMsg:'',
         }
+    },
+    mounted(){
+        const _this = this
+        window.onscroll = function(){
+            let top = document.documentElement.scrollTop;
+            // console.log(top)
+            if(top>_this.bannerHeight){
+                _this.$refs.mySearch.style.background = "rgba(201,21,35,0.82)";                
+            }else{
+                let op = top/_this.bannerHeight * 0.82;
+                _this.$refs.mySearch.style.background = "rgba(201,21,35," + op + ")"
+            }
+        }
+    },
+    methods:{
+        
     }
 }
 </script>

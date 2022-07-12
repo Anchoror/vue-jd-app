@@ -93,6 +93,7 @@ body {
 
 .m_banner ul:first-child li {
     width: 10%;
+    /* height: 100%; */
     float: left;
 }
 

@@ -3,10 +3,10 @@
   <div class="home">
     <div class="m_layout">
         <!-- 头部区 -->
-        <HomeHeader></HomeHeader>
+        <HomeHeader :bannerHeight="bannerHeight"></HomeHeader>
 
         <!-- 轮播图 -->
-        <HomeBanner></HomeBanner>
+        <HomeBanner @sendBannerHeight="getMsg"></HomeBanner>
 
         <!-- 导航区 -->
         <HomeNav></HomeNav>
@@ -22,7 +22,7 @@ import HomeBanner from "../components/HomeBanner.vue";
 import HomeNav from "../components/HomeNav.vue";
 import HomeMain from "../components/HomeMain.vue";
 
-// import {bindEvent,scrollPic} from '../assets/js/index.js'
+// import {bindEvent,scrollPic} from '../assets/js/index.js'  //头部栏和轮播图的js
 
 export default {
   components:{
@@ -31,9 +31,21 @@ export default {
     HomeNav,
     HomeMain,
   },
+  data(){
+    return{
+      bannerHeight:0
+    }
+  },
   mounted(){
     // bindEvent()
     // scrollPic()
+    // console.log(this.$refs.bannerBox)
+  },
+  methods:{
+    getMsg(height){
+      this.bannerHeight = height
+      // console.log(this.bannerHeight)
+    }
   }
 }
 </script>
