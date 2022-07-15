@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav> -->
     <router-view></router-view>
     <NavBottomView/>
   </div>
@@ -21,6 +17,6 @@ export default{
 }
 </script>
 <style>
-@import url("./assets/css/base.css");
+@import './assets/css/index.css';
 </style>
 

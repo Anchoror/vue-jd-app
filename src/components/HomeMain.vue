@@ -67,26 +67,23 @@
             }
         },
         mounted(){
-            // this.getData();
+            this.getData();
         },
         methods:{
-            // getData(){
-            //     let _this = this;
-            //     _this.$http.get('/home').then((res)=>{
-            //         _this.homeDatas.push(res.data[0]);
-            //         _this.homeDatas.push(res.data[1]);
-            //         _this.homeDatas.push(res.data[2]);
-            //         _this.homeDatas.push(res.data[3]);
-            //         _this.mainDatas = res.data;
-            //     },(err)=>{
-            //         console.log(err);
-            //     })
-            // }
+            getData(){
+                this.$http.get('/home').then((res)=>{
+                    this.homeDatas.push(res.data[0]);
+                    this.homeDatas.push(res.data[1]);
+                    this.homeDatas.push(res.data[2]);
+                    this.homeDatas.push(res.data[3]);
+                    this.mainDatas = res.data;
+                    console.log(res);
+                },(err)=>{
+                    console.log(err);
+                })
+            }
         }
     }
 </script>
 <style>
-    /* img[lazy=error] {
-    background: url('../assets/images/err.png');
-  } */
 </style>
